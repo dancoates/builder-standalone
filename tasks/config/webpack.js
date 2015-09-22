@@ -12,12 +12,18 @@ var conf = {
     },
     devtool : 'source-map',
     plugins : [
-        new webpack.optimize.UglifyJsPlugin()
+        //new webpack.optimize.UglifyJsPlugin()
     ],
     module: {
+        preLoaders : [
+            { test: /\.js[x]?$/, exclude: /node_modules/, loader: 'eslint-loader'}
+        ],
         loaders: [
             { test: /\.js[x]?$/, exclude: /node_modules/, loader: 'babel-loader'}
         ]
+    },
+    eslint : {
+        configFile: './.eslintrc'
     }
 };
 

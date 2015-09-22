@@ -1,0 +1,21 @@
+{
+    "extends" : [
+        "eslint:recommended"
+    ],
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules" : true
+    },
+    "rules": {
+        "no-console" : 0,
+        "semi": [2, "always"],
+        "quotes": [2, "single"],
+        "comma-dangle" : [2, "never"],
+        "no-cond-assign" : [2, "always"],
+        "indent" : 2
+    },
+    "env" : {
+        "browser" : true,
+        "es6" : true
+    }
+}
