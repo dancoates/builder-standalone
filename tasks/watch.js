@@ -1,8 +1,18 @@
 
 
-import woot from './sass/build';
+import webpack from 'webpack';
+import webpackDevServer from 'webpack-dev-server';
+
+import webpackConfig from './config/webpack.js';
 
 
+class Watch {
+    run() {
 
-export default woot;
+        webpack(webpackConfig, function(err, stats){
+            process.stdout.write(stats.toString());
+        });
+    }
+}
 
+export default new Watch();

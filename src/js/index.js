@@ -1,3 +1,6 @@
+import 'style';
+
+
 /**
  * this is MyClass description.
  * @example
@@ -9,7 +12,7 @@ export default class MyClass {
    * @param {number} arg1 this is arg1 description.
    * @param {string[]} arg2 this is arg2 description.
    */ 
-  constructor(arg1, arg2) {
+  constructor() {
 
   }
 }

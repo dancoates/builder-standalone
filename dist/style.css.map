@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/src/sass/style.scss"],"names":[],"mappings":"AAEA,KACI,gBAHS","file":"style.css","sourcesContent":["$color: green;\n\nbody {\n    background: $color;\n}\n\n\n/** WEBPACK FOOTER **\n ** webpack:///sass-loader?sourceMap!./src/src/sass/style.scss\n **/"],"sourceRoot":""}
