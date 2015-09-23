@@ -6,9 +6,9 @@
   "scripts": {
     "test": "mocha --compilers js:babel/register --recursive --reporter nyan || true",
     "cover": "babel-node node_modules/.bin/isparta cover node_modules/.bin/_mocha -- --recursive --reporter nyan || true",
-    "watch": "webpack-dev-server --inline --hot",
-    "build": "webpack",
-    "docs": "esdoc -c esdoc.json "
+    "watch": "webpack-dev-server --inline --hot || true",
+    "build": "webpack || true",
+    "docs": "esdoc -c esdoc.json || true"
   },
   "author": "Dan Coates",
   "devDependencies": {
