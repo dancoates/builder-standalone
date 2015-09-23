@@ -1,2 +1,2 @@
-body{background:green}
+body{background:red;-webkit-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out}
 /*# sourceMappingURL=style.css.map*/

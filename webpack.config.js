@@ -2,6 +2,7 @@
 var dev = process.argv[1] && process.argv[1].indexOf('webpack-dev-server') !== -1;
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: "./src/js/index.js",
@@ -28,11 +29,14 @@ module.exports = {
         ],
         loaders: [
             { test: /\.js[x]?$/, exclude: /node_modules/, loaders: (dev ? ['react-hot-loader', 'babel-loader'] : ['babel-loader'])},
-            { test: /\.scss?$/, exclude: /node_modules/, loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap')}
+            { test: /\.scss?$/, exclude: /node_modules/, loader: ExtractTextPlugin.extract('css?sourceMap!postcss?sourceMap!sass?sourceMap')}
         ]
     },
     eslint : {
         configFile: './.eslintrc'
     },
-    stats : {colors : true}
+    stats : {colors : true},
+    postcss : function() {
+        return [autoprefixer]
+    }
 };
