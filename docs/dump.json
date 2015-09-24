@@ -3,47 +3,121 @@
     "kind": "file",
     "static": true,
     "variation": null,
-    "name": "js/example.js",
+    "name": "js/actions/actions.js",
     "memberof": null,
-    "longname": "js/example.js",
+    "longname": "js/actions/actions.js",
     "access": null,
     "description": null,
-    "lineNumber": 5,
-    "content": "/**\n * Represents a book.\n * @constructor\n */\nvar thingo = function(a, b) {\n    return a + b;\n};\n\nexport default thingo;"
+    "lineNumber": 8,
+    "content": "\n/**\n *\n * Update info constant\n * @type {string}\n */\n\nexport const UPDATE_INFO = 'UPDATE_INFO';\n\n\n/**\n *\n * The main action used to pass simple data from the form to the store\n * @param {string} name is the name of the field\n * @param {string} data is the data contained in the field\n *\n */\n\nexport function updateInfo(name, data) {\n    return {\n        type : UPDATE_INFO,\n        name : name,\n        data : data\n    };\n}"
+  },
+  {
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "UPDATE_INFO",
+    "memberof": "js/actions/actions.js",
+    "longname": "js/actions/actions.js~UPDATE_INFO",
+    "access": null,
+    "export": true,
+    "importPath": "react-redux-starter/js/actions/actions.js",
+    "importStyle": "{UPDATE_INFO}",
+    "description": "Update info constant",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
   },
   {
     "kind": "function",
     "static": true,
     "variation": null,
-    "name": "thingo",
-    "memberof": "js/example.js",
-    "longname": "js/example.js~thingo",
+    "name": "updateInfo",
+    "memberof": "js/actions/actions.js",
+    "longname": "js/actions/actions.js~updateInfo",
     "access": null,
     "export": true,
-    "importPath": "react-redux-starter/js/example.js",
-    "importStyle": "thingo",
-    "description": "Represents a book.",
-    "lineNumber": 5,
-    "unknown": [
-      {
-        "tagName": "@constructor",
-        "tagValue": ""
-      }
-    ],
+    "importPath": "react-redux-starter/js/actions/actions.js",
+    "importStyle": "{updateInfo}",
+    "description": "The main action used to pass simple data from the form to the store",
+    "lineNumber": 19,
     "params": [
       {
-        "name": "a",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "is the name of the field"
       },
       {
-        "name": "b",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "is the data contained in the field"
       }
     ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "js/components/app.js",
+    "memberof": null,
+    "longname": "js/components/app.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\n\n\nexport default class App extends React.Component {\n\n    render() {\n        console.log(this.props);\n        return (<div>Hello World</div>);\n    }\n}"
+  },
+  {
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "App",
+    "memberof": "js/components/app.js",
+    "longname": "js/components/app.js~App",
+    "access": null,
+    "export": true,
+    "importPath": "react-redux-starter/js/components/app.js",
+    "importStyle": "App",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "js/components/app.js~App",
+    "longname": "js/components/app.js~App#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "params": [],
     "return": {
       "types": [
         "*"
@@ -60,59 +134,94 @@
     "longname": "js/index.js",
     "access": null,
     "description": null,
-    "lineNumber": 6,
-    "content": "/**\n * this is MyClass description.\n * @example\n * let myClass = new MyClass();\n */\nexport default class MyClass {\n  /**\n   * this is constructor description.\n   * @param {number} arg1 this is arg1 description.\n   * @param {string[]} arg2 this is arg2 description.\n   */ \n  constructor(arg1, arg2) {\n\n  }\n}"
+    "lineNumber": 1,
+    "content": "import 'style';\n\nimport React from 'react';\nimport { createStore } from 'redux';\nimport { Provider } from 'react-redux';\n\nimport reducer from 'reducers/reducers';\nimport App from 'components/app';\n\nlet store = createStore(reducer);\n\nvar appElem = document.getElementById('App');\n\n\nReact.render(\n    <Provider store={store}>\n        {() => <App/>}\n    </Provider>,\n    appElem\n);\n\n\n"
   },
   {
-    "kind": "class",
+    "kind": "variable",
     "static": true,
     "variation": null,
-    "name": "MyClass",
+    "name": "store",
     "memberof": "js/index.js",
-    "longname": "js/index.js~MyClass",
+    "longname": "js/index.js~store",
     "access": null,
-    "export": true,
+    "export": false,
     "importPath": "react-redux-starter/js/index.js",
-    "importStyle": "MyClass",
-    "description": "this is MyClass description.",
-    "examples": [
-      "let myClass = new MyClass();"
-    ],
-    "lineNumber": 6,
-    "interface": false
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
   },
   {
-    "kind": "constructor",
-    "static": false,
+    "kind": "variable",
+    "static": true,
     "variation": null,
-    "name": "constructor",
-    "memberof": "js/index.js~MyClass",
-    "longname": "js/index.js~MyClass#constructor",
+    "name": "appElem",
+    "memberof": "js/index.js",
+    "longname": "js/index.js~appElem",
     "access": null,
-    "description": "this is constructor description.",
+    "export": false,
+    "importPath": "react-redux-starter/js/index.js",
+    "importStyle": null,
+    "description": null,
     "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "js/reducers/reducers.js",
+    "memberof": null,
+    "longname": "js/reducers/reducers.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 3,
+    "content": "\n// @TODO add docs, tests and break out into multiple files\nimport * as actions from 'actions/actions';\n\nfunction reducer(state, action) {\n    switch (action.type) {\n    case actions.UPDATE_INFO:\n        return (() => {\n            var obj = {};\n            obj[action.name] = action.data;\n            return Object.assign({}, state, obj);\n        })();\n    default:\n        return state;\n    }\n}\n\nexport default reducer;"
+  },
+  {
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "reducer",
+    "memberof": "js/reducers/reducers.js",
+    "longname": "js/reducers/reducers.js~reducer",
+    "access": null,
+    "export": true,
+    "importPath": "react-redux-starter/js/reducers/reducers.js",
+    "importStyle": "reducer",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
     "params": [
       {
-        "nullable": null,
+        "name": "state",
         "types": [
-          "number"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "arg1",
-        "description": "this is arg1 description."
+          "*"
+        ]
       },
       {
-        "nullable": null,
+        "name": "action",
         "types": [
-          "string[]"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "arg2",
-        "description": "this is arg2 description."
+          "*"
+        ]
       }
     ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
     "generator": false
   },
   {

@@ -17,10 +17,16 @@ module.exports = {
     },
     devtool : 'source-map',
     plugins : (dev ? [
-        new ExtractTextPlugin('style.css')
+        new ExtractTextPlugin('style.css'),
+        new webpack.DefinePlugin({
+            __DEV__ : dev
+        })
     ] : [
         new ExtractTextPlugin('style.css'),
-        new webpack.optimize.UglifyJsPlugin()
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.DefinePlugin({
+            __DEV__ : dev
+        })
     ]),
 
     module: {

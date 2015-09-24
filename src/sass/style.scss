@@ -1,6 +1,7 @@
-$color: red;
+@import "settings";
+
 
 body {
-    background: $color;
+    background: $background;
     transition: opacity 0.5s ease-in-out;
 }

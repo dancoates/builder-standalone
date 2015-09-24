@@ -17,5 +17,12 @@
     "env" : {
         "browser" : true,
         "es6" : true
-    }
+    },
+    "plugins" : [
+        "react"
+    ],
+    "globals" : {
+        "__DEV__" : true,
+        "require" : true
+    } 
 }

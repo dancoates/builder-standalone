@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../">
-  <title data-ice="title">Variable | API Document</title>
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">js/components/app.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -38,84 +38,18 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">Variable</h1>
-<div data-ice="summaries"><table class="summary" data-ice="summary">
-  <thead><tr><td data-ice="title" colspan="3">Static Public Summary</td></tr></thead>
-  <tbody>
-  
-  <tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-           <span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_INFO">UPDATE_INFO</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Update info constant</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
-<div data-ice="details"><h2 data-ice="title">Static Public </h2>
+<div class="content" data-ice="content"><h1 data-ice="title">js/components/app.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React from &apos;react&apos;;
 
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-UPDATE_INFO">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    <span data-ice="name">UPDATE_INFO</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/js/actions/actions.js.html#lineNumber8">source</a></span></span>
-    </span>
-  </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {UPDATE_INFO} from &apos;<span><a href="file/js/actions/actions.js.html#lineNumber8">react-redux-starter/js/actions/actions.js</a></span>&apos;</code></pre></div>
-  
-  
-  <div data-ice="description"><p>Update info constant</p>
-</div>
+export default class App extends React.Component {
 
-  
+    render() {
+        console.log(this.props);
+        return (&lt;div&gt;Hello World&lt;/div&gt;);
+    }
+}</code></pre>
 
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-</div>
 </div>
 
 <footer class="footer">

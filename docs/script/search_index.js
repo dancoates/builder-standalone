@@ -1,14 +1,26 @@
 window.esdocSearchIndex = [
   [
-    "react-redux-starter/js/index.js~myclass",
-    "class/js/index.js~MyClass.html",
-    "<span>MyClass</span> <span class=\"search-result-import-path\">react-redux-starter/js/index.js</span>",
+    "react-redux-starter/js/components/app.js~app",
+    "class/js/components/app.js~App.html",
+    "<span>App</span> <span class=\"search-result-import-path\">react-redux-starter/js/components/app.js</span>",
     "class"
   ],
   [
-    "react-redux-starter/js/example.js~thingo",
-    "function/index.html#static-function-thingo",
-    "<span>thingo</span> <span class=\"search-result-import-path\">react-redux-starter/js/example.js</span>",
+    "react-redux-starter/js/actions/actions.js~update_info",
+    "variable/index.html#static-variable-UPDATE_INFO",
+    "<span>UPDATE_INFO</span> <span class=\"search-result-import-path\">react-redux-starter/js/actions/actions.js</span>",
+    "variable"
+  ],
+  [
+    "react-redux-starter/js/reducers/reducers.js~reducer",
+    "function/index.html#static-function-reducer",
+    "<span>reducer</span> <span class=\"search-result-import-path\">react-redux-starter/js/reducers/reducers.js</span>",
+    "function"
+  ],
+  [
+    "react-redux-starter/js/actions/actions.js~updateinfo",
+    "function/index.html#static-function-updateInfo",
+    "<span>updateInfo</span> <span class=\"search-result-import-path\">react-redux-starter/js/actions/actions.js</span>",
     "function"
   ],
   [
@@ -336,10 +348,22 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
-    "js/example.js",
-    "file/js/example.js.html",
-    "js/example.js",
+    "js/actions/actions.js",
+    "file/js/actions/actions.js.html",
+    "js/actions/actions.js",
     "file"
+  ],
+  [
+    "js/components/app.js",
+    "file/js/components/app.js.html",
+    "js/components/app.js",
+    "file"
+  ],
+  [
+    "js/components/app.js~app#render",
+    "class/js/components/app.js~App.html#instance-method-render",
+    "js/components/app.js~App#render",
+    "method"
   ],
   [
     "js/index.js",
@@ -348,9 +372,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "js/index.js~myclass#constructor",
-    "class/js/index.js~MyClass.html#instance-constructor-constructor",
-    "js/index.js~MyClass#constructor",
-    "method"
+    "js/reducers/reducers.js",
+    "file/js/reducers/reducers.js.html",
+    "js/reducers/reducers.js",
+    "file"
   ]
 ]

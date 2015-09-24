@@ -18,6 +18,8 @@
     "esdoc": "^0.3.0",
     "eslint": "^1.5.0",
     "eslint-loader": "^1.0.0",
+    "eslint-plugin-react": "^3.4.2",
+    "expect": "^1.10.0",
     "extract-text-webpack-plugin": "^0.8.2",
     "isparta": "^3.0.4",
     "mocha": "^2.3.3",
