@@ -23,6 +23,7 @@
     ],
     "globals" : {
         "__DEV__" : true,
-        "require" : true
+        "require" : true,
+        "moduel" : true
     } 
 }

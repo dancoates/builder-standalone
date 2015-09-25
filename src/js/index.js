@@ -5,7 +5,7 @@ import { compose, createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 
-import reducer from 'reducers/reducers';
+import reducer from 'reducers';
 import App from 'components/app';
 
 let store = false;
@@ -31,6 +31,7 @@ if(__DEV__) {
           <DevTools store={store} monitor={LogMonitor}/>
         </DebugPanel>
     );
+
 } else {
     store = createStore(reducer);
 }
