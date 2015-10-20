@@ -24,9 +24,9 @@
     "eslint": "^1.5.0",
     "eslint-loader": "^1.0.0",
     "eslint-plugin-react": "^3.4.2",
-    "expect": "^1.10.0",
     "extract-text-webpack-plugin": "^0.8.2",
     "isparta": "^3.0.4",
+    "minimist": "^1.2.0",
     "mocha": "^2.3.3",
     "node-sass": "^3.3.3",
     "postcss-loader": "^0.6.0",
@@ -35,8 +35,8 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.11.0"
   },
-  "bin" : {
-    "build" : "./bin/build.js"
+  "bin": {
+    "build": "./bin/build.js"
   },
   "engines": {
     "node": ">= 4.0.0",

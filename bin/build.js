@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-console.log('test');
+
+var args = require('minimist')(process.argv.slice(2));
+console.log(args);
