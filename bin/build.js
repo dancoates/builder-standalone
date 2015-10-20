@@ -4,6 +4,8 @@ var args = require('minimist')(process.argv.slice(2));
 var exec = require('child_process').exec;
 var path = require('path');
 var _ = require('lodash');
+var tmp = require('tmp');
+var fs = require('fs');
 
 var dirs = {
     working : process.cwd(),
@@ -17,23 +19,30 @@ var colors = require('colors/safe');
 
 var defaults = {
     esdoc : {
-        config : 'esdoc.json',
-        location : 'working'
-
+        config : {
+            source: path.resolve(dirs.working, 'src/js'),
+            destination: path.resolve(dirs.working, 'docs')
+        }
     }
 };
 
-var settings = _.assign(defaults, config);
-
-var commands = {
-    esdoc : 'esdoc' +
-            ' -c ' + path.resolve(dirs[settings.esdoc.location], settings.esdoc.config)
-};
+var settings = _.merge(defaults, config);
 
 var task = args.task;
+var tasks = {
+    esdoc : function(){
+        var tmpFile = tmp.fileSync();
+        fs.writeFileSync(tmpFile.name, JSON.stringify(settings.esdoc.config));
+        exec('esdoc -c ' + tmpFile.name, function(){
+            console.log(arguments);
+        });
+    }
+};
 
-if(commands[task]) {
-    console.log(commands[task]);
+
+
+if(tasks[task]) {
+    tasks[task]();
 } else {
     process.stderr.write('Error: Task not found');
 }
