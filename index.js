@@ -1,1 +1,3 @@
-console.log('woot');
+module.exports = function() {
+    console.log('woot');
+}
